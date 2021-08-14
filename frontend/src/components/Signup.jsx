@@ -1,20 +1,22 @@
 import React, {useState} from 'react'
-import './Login.css'
+import './Signup.css'
 import showPwdImg from './show-password.svg';
 import hidePwdImg from './hide-password.svg';
 import { useForm } from "react-hook-form";
 import { NavLink } from 'react-router-dom'
 
-function Login() {
+function Signup() {
 
     const [pwd, setPwd] = useState('');
     const [isRevealPwd, setIsRevealPwd] = useState(false);
 
     return (
-        <div className="login">
+        <div className="signup">
             <fieldset>
-                <h1>Log in</h1>
+                <h1>Sign Up</h1>
                 <form>
+                    <label htmlFor="">User Name</label> <br />
+                    <input type="text" name="UserName" placeholder="Enter your User Name" /> <br />
                     <label htmlFor="">Email</label> <br />
                     <input type="text" name="Email" placeholder="Enter your Email" /> <br />
                     <label htmlFor="">Password</label>
@@ -25,18 +27,13 @@ function Login() {
                     /> <br />
                     <input type={isRevealPwd ? "text" : "password"}
                         value={pwd}
-                        onChange={e => setPwd(e.target.value)} name="Password" placeholder="Enter your Password" /> <br />
-                    <div className="status">
-                        <input type="checkbox" name="status" />
-                        <label htmlFor="">Remember me</label>
+                        onChange={e => setPwd(e.target.value)} name="Password" placeholder="Enter Password" /> <br />
+                    <div className="signup_button">
+                        <button>Sign Up For Free</button>
                     </div>
-                    <NavLink exact activeClassName="forget_password_link" to="#">Forgot password?</NavLink> <br />
-                    <div className="login_button">
-                        <button>Log In</button>
-                    </div>
-                    <div className="log_in">
-                        <label htmlFor="">Need an account?</label>
-                        <NavLink exact activeClassName="log_in_link" to="/Signup">Sign up</NavLink>
+                    <div className="sign_up">
+                        <label htmlFor="">Already have an account?</label>
+                        <NavLink exact activeClassName="sign_up_link" to="/Login">Log in</NavLink>
                     </div>
                 </form>
             </fieldset>
@@ -44,4 +41,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Signup

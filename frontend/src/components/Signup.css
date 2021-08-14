@@ -1,4 +1,4 @@
-.login {
+.signup {
     display: flex;
     justify-content: center;
     padding: 100px;
@@ -25,35 +25,25 @@ img {
     width: 20px;
     margin-left: 250px;
 }
-.status {
-    margin-top: 10px;
-}
-.forget_password_link {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    margin-top: 20px;
-}
-.login_button {
+.signup_button {
     display: flex;
     justify-content: center;
 }
 button {
     height: 45px;
-    width: 160px;
+    width: 190px;
     font-size: 18px;
     border-radius: 50px;
     border-style: none;
     background-color: #cd9042;
 }
-.log_in {
+.sign_up {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.log_in_link {
+.sign_up_link {
     margin-left: 8px;
     text-decoration: none;
     color: #e28f22;
