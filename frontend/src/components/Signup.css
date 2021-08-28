@@ -14,11 +14,15 @@ form {
     padding: 6px 10px 8px 10px;
 
 }
-input[type="text"], input[type="password"]{
+input{
     height: 40px;
     width: 350px;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+textarea {
+    width: 350px;
+    resize: none;
 }
 img {
     cursor: pointer;

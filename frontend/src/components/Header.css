@@ -45,10 +45,10 @@ input[type="text"]:focus {
 }
 
 .cart {
-    padding: 5px;
+    padding: 10px;
 }
 
-.login_button {
+.header_login_button {
     height: 50px;
     width: 120px;
     margin-right: 10px;
