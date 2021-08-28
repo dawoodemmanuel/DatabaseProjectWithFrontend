@@ -1,4 +1,5 @@
 import './App.css';
+import Home from './components/Home';
 import About from './components/About';
 import {Switch, Route} from 'react-router-dom';
 import Contact from './components/Contact';
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
+      <Route exact path={["/","/home"]} component={Home} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/aboutus" component={About} />
         <Route exact path="/login" component={Login} />

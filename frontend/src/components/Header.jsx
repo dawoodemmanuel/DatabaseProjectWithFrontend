@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './Happy Mart.png'
+import logo from './HappyMart.png'
 import SearchIcon from '@material-ui/icons/Search'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {NavLink} from 'react-router-dom'
@@ -22,7 +22,7 @@ function Header() {
                 <ShoppingCartIcon className="cart"></ShoppingCartIcon>
             </div>
             <div className="log_in">
-                <button className="login_button">Log In</button>
+                <button className="header_login_button">Log In</button>
             </div>
         </div>
     )
