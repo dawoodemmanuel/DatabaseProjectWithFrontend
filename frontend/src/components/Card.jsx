@@ -1,36 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+//import "./style.css";
+import CardApi from "./CardApi";
+import ItemCard from "./ItemCard";
 
-const Card = ({ CardData }) => {
-  //   console.log(menuData);
 
+const Card = () => {
+
+	  const [itemList, setItemList] = useState(CardApi);	
   return (
     <>
-      <section className="main-card--cointainer">
-        {CardData.map((curElem) => {
-          const { id, name, category, image, description } = curElem;
-
-          return (
-            <>
-              <div className="card-container" key={id}>
-                <div className="card ">
-                  <div className="card-body">
-                    <span className="card-number card-circle subtle">{id}</span>
-                    <span className="card-author subtle"> {category}</span>
-                    <h2 className="card-title"> {name} </h2>
-                    <span className="card-description subtle">
-                      {description}
-                    </span>
-                    <div className="card-read">Read</div>
-                  </div>
-                  <img src={image} alt="images" className="card-media" />
-
-                  <span className="card-tag  subtle">Order Now</span>
-                </div>
-              </div>
-            </>
-          );
-        })}
-      </section>
+    <ItemCard itemList={itemList} />
     </>
   );
 };

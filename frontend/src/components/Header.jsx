@@ -1,30 +1,21 @@
 import React from 'react'
-import logo from './HappyMart.png'
-import SearchIcon from '@material-ui/icons/Search'
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import {NavLink} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Logo from '../image/logo-bg-black.png'
 import './Header.css'
 
 function Header() {
+
     return (
 
         <div className="header">
-            <img className="header_logo" src={logo} alt="Site Logo" />
-            <div className="header_search">
-                <input className="header_search_input" type="text" placeholder="Search Item Here"></input>
-                <SearchIcon className="header_searchIcon"></SearchIcon>
-            </div>
-            <div className="header_pages">
-                <NavLink activeClassName="header_page_route" exact to="#">Contact</NavLink>
-                <NavLink activeClassName="header_page_route" exact to="#">About Us</NavLink>
-            </div>
-            <div className="add-to_cart">
-                <ShoppingCartIcon className="cart"></ShoppingCartIcon>
-            </div>
-            <div className="log_in">
-                <button className="header_login_button">Log In</button>
-            </div>
+        <img src={Logo} alt="" className="logo" />
+        <div class="header-right">
+          <a class="active" href="home">My Shop</a>
+          <a href="My Cart">My Cart</a>
+          <Link to={"Login"}>Log In</Link>
+          <Link to={"Signup"}>Sign Up</Link>
         </div>
+      </div> 
     )
 }
 

@@ -2,8 +2,12 @@ import React from 'react'
 import './Footer.css'
 function Footer() {
     return (
-        <div className="footer">
-            <footer>@2021 All Right Reserved</footer>
+        <div>
+            <footer class="row">
+                <p>
+                    Copyright &copy; 2021 by Happy Sports, All rights are reserved.
+                </p>
+            </footer>
         </div>
     )
 }

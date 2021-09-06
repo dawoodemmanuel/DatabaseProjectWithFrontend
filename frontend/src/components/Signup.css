@@ -14,17 +14,20 @@ form {
     padding: 6px 10px 8px 10px;
 
 }
-input{
+input {
     height: 40px;
     width: 350px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
+p{
+    color: red;
+}
 textarea {
     width: 350px;
     resize: none;
 }
-img {
+.eyeLogo {
     cursor: pointer;
     width: 20px;
     margin-left: 250px;
@@ -35,11 +38,17 @@ img {
 }
 button {
     height: 45px;
-    width: 190px;
+    /* width: 190px; */
     font-size: 18px;
     border-radius: 50px;
-    border-style: none;
-    background-color: #cd9042;
+    border: 2px solid rgb(184, 184, 184);
+    color: rgb(184, 184, 184);
+    background-color: rgb(9, 16, 48);;
+}
+button:hover {
+    color: white;
+    background-color: rgb(0, 25, 134);
+    border: 2px solid white;
 }
 .sign_up {
     display: flex;

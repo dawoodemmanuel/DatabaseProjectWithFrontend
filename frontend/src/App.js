@@ -1,13 +1,14 @@
 import './App.css';
 import Home from './components/Home';
 import About from './components/About';
-import {Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Contact from './components/Contact';
 import Login from './components/Login';
 import Signup from './components/Signup';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <Switch>
       <Route exact path={["/","/home"]} component={Home} />
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/signup" component={Signup}/>
       </Switch>
     </div>
+    </BrowserRouter>
   );
 }
 

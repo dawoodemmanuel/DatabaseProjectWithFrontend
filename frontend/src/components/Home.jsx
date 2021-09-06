@@ -1,18 +1,27 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Header from './Header'
+import ItemCard from './ItemCard'
 import Footer from './Footer';
-import './Card.css'
-import Card from './Card'
-import CardList from './CardList';
 
 const Home = () => {
-    const [CardData, setCardData] = useState(CardList);
+    
+    const isLogin = () => {
+        if (localStorage.getItem('token')) {
+            return true;
+        }
+    
+        return false;
+    }
+
     return (
         <>
         <Header />
-        <Card CardData={CardData} />
+        <br />
+        <ItemCard />
+        <br /><br /><br /><br /><br /><br /><br />
         <Footer />
         </>
+        
     )
 }
 export default Home;
